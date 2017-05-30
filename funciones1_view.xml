@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <record id="funciones1_tree_view" model="ir.ui.view">
+            <field name="name">funciones1.tree</field>
+            <field name="model">funciones1</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+            	<tree string="Funinciones1">
+              		<field name="importe1"/>
+              		<field name="importe2"/>
+              		<field name="importe3"/>
+					<field name="display1"/>
+              	</tree>
+            </field>
+        </record>
+
+		<record id="funciones1_form_view" model="ir.ui.view">
+            <field name="name">funciones1.form</field>
+            <field name="model">funciones1</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            	<form string="ficha">
+          			<group string="Funciones 1" colspan="2">
+			  			<group>
+							<field name="importe1"/>
+							<field name="importe2"/>
+			  			</group>
+			  			<group>
+							<field name="importe3"/>
+							<field name="display1"/>
+			  			</group>
+          			</group>
+        		</form>
+            </field>
+        </record>
+
+        <record id="funciones1_action" model="ir.actions.act_window">
+            <field name="name">Funciones1</field>
+            <field name="res_model">funciones1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="funciones1_menu" name="FUNCIONES1" icon="terp-project" web_icon="data/funciones1.png" web_icon_hover="data/funciones1.png"/>
+        <menuitem id="submenu_funciones1_menu" parent="funciones1_menu" name="Funciones1" sequence="0" />
+        <menuitem id="submenu_funciones1_action" icon="terp-project" parent="submenu_funciones1_menu" name="MisFunciones1" sequence="0" action="funciones1_action"/>
+         
+    </data>
+</openerp>
